@@ -8,6 +8,28 @@
     margin: 0px;
 }
 
+.content{
+    display: none;
+    opacity: 0;
+}
+
+li{
+    text-decoration: none;
+    color: white;
+    list-style: none;
+    margin-top: 5px;
+    width: 25px;
+    background-color: rgb(19, 19, 19);
+    border-radius: 55%;
+    transition: 0.5s;
+    text-align: center;
+    font-family: regular-Kdam;
+}
+
+.plus{
+    color: #c394ff;
+}
+
 body{
     background-color: rgb(6, 9, 12) ;
     display: flex;
@@ -100,9 +122,63 @@ img{
 
 }
 
+.extenders{
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    position: relative;
+    text-align: start;
+    margin-left: 10px;
+    height: 190px;
+    /* border: blue 2px solid; */
+}
+.extenders-list{
+    animation: opa_2 0.5s;
+    position: absolute;
+    margin: auto;
+    margin-top: 5px;
+    left: -430px;
+    transition: 1s;
+}
+
+/* li:hover{
+    transform: scale(1.1) for zooming; 
+} */
+
+li:hover{
+    width: 90px;
+    transition: 0.1s;
+    transition-delay: 0.05s;
+    cursor: pointer;
+    border-radius: 0%;
+    border-top-left-radius: 24px;
+    border-bottom-left-radius: 24px;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+    background-color: #090014;
+
+}
+
+li:hover .plus{display: none;}
+
+li:hover .content{
+    display: block;
+    animation: opa 0.8s forwards;
+    transition: 2s;
+    /* we use forwards we Maintain the final state at end of a CSS3 animation | the content is what we want to show on hover*/
+}
+
+
 @keyframes shake {
     10%{transform: rotate(15deg);}
     20%{transform: rotate(-15deg);}
     30%{transform: rotate(15deg);}
     40%{transform: rotate(-15deg);}
+}
+
+@keyframes opa {
+    10%{opacity: 0;}
+    20%{opacity: 10;}
+    50%{opacity: 50;}
+    100%{opacity: 1;}
 }
