@@ -51,7 +51,10 @@ body{
 }
 
 .img-area{
-    background-color: black;
+    background: #474bff;
+    background: -webkit-linear-gradient(76deg, #474bff 0%, #bc48ff 100%);
+    background: linear-gradient(76deg, #474bff 0%, #bc48ff 100%);
+    box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px, rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px, rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
     align-self: center;
     width: 500px;
     height: 500px;
@@ -60,14 +63,18 @@ body{
 }
 
 .logo{
+    background-image: url("./SVG/logo.svg");
+    background-repeat: no-repeat;
+    background-size: 40px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     color:orange;
     font-family: lobster-regular;
+    padding-left: 50px;
 
 }
 
 .sign-up-title{
-    margin-top: 60px;
+    margin-top: 50px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     align-self: center;
     color: #B3B6B7;
@@ -114,6 +121,28 @@ body{
 }
 .password{
     background-image: url("./SVG/pass.svg");
+}
+
+
+.check-box{
+    display: flex;
+    flex-direction: row;
+    align-self: left;
+    padding-left: 13px;
+    padding-top: 5px;
+    align-items: center;
+}
+
+.check:hover{
+    cursor: pointer;
+}
+
+.check-box .check-lable{
+    padding-left: 10px;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 13px;
+    color: #616A6B;
+    text-align: center;
 }
 
 .buttons{
@@ -173,6 +202,20 @@ body{
     margin-top: 10px;
     color: #616A6B;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.footer-img{
+    width: 20px;
+    align-self: center;
+    margin-top: 15px;
+}
+.footer{
+    font-size: 10px;
+    align-self: center;
+    margin-top: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: rgb(121, 121, 121);
+    justify-self: center;
 }
 
 ::placeholder {
