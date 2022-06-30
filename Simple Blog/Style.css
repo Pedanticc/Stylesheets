@@ -30,6 +30,8 @@ body{
     border-radius: 5px;
     margin-top: 20px;
     background-color: white;
+    height: fit-content;
+    transition: 500ms;
 }
 
 
@@ -55,8 +57,8 @@ body{
 .first-section .pic-area{
     border-radius: 15px;
     width: 400px;
-    min-width: 390px;
-    min-height: 300px;
+    min-width: 400px;
+    max-height: 400px;
     box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
 }
 
@@ -64,11 +66,13 @@ body{
     margin-top: 30px;
     font-family: bold;
     font-size: 30px;
+    min-width: 400px;
 }
 
 .paragraph p{
     margin-top: 25px;
     font-family: regular;
+    min-width: 400px;
 }
 
 .paragraph .buy{
@@ -148,6 +152,7 @@ body{
     padding-right: 10px;
     gap: 40px;
     box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+
 }
 
 .third-section .pic{
@@ -178,102 +183,84 @@ body{
 }
 
 
-.last-section .container{
-    width: 75%;
-    margin: auto;
-    margin-top: 50px;
+
+@media screen and (max-width: 1460px) {
+    .first-section{
+        width: 90%;
+    }
 }
 
-.last-section .header{
-    font-family: bold;
-    margin-bottom: 30px;
+@media screen and (max-width: 1300px) {
+
+    .first-section{
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .first-section .pic-area{
+        justify-self: right;
+        align-self: flex-end;
+        transition: 200ms;
+    }
+    .first-section .paragraph{
+        justify-self: center;
+        align-self: flex-start;
+        margin-top: 0px;
+        width: 80%;
+        transition: 200ms;
+    
+    }
+
+    .first-section .buy{
+        justify-self: center;
+        align-self: center;
+    }
+
+    .second-section .boxes{
+        flex-direction: column;
+    }
 }
 
-.last-section .boxes{
-    display: flex;
-    gap: 50px;
-    margin-top: 20px;
+@media screen and (max-width: 1280px) {
+
+    .first-section .paragraph{
+        margin-left: 50px;
+        transition: 200ms;
+    }
+
+    .first-section .pic-area{
+        margin-right: 50px;
+        transition: 400ms;
+    }
 }
 
-.last-box{
-    background-color: #ECF0F1;
-    flex: 1;
-    height: 600px;
-    border-radius: 15px;
-    box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
-    display: flex;
-    flex-direction: column;
+
+@media screen and (max-width: 820px) {
+
+    .first-section .pic-area{
+        margin-right: 0px;
+        transition: 0ms;
+        align-self: center;
+        width: auto;
+    }
+    
+    .first-section .paragraph{
+        align-self: center;
+        display: flex;
+        text-align: center;
+        flex-direction: column;
+        padding: 0px;
+        margin: 0px;
+        width: fit-content;
+    }
 }
 
-.last-box .pic{
-    width: 245px;
-    height: 369px;
-    min-width: 0px;
-    border-radius: 13px;
-}
+@media screen and (max-width: 799px) {
 
-.last-box .header{
-    font-family: bold;
-    font-size: 10px;
-    padding: 20px;
-    padding-bottom: 0px;
-}
-
-.last-box .items{
-    display: flex;
-    flex-direction: column;
-    margin-top: -20px;
-    margin-bottom: 0px;
-    gap: 5px;
-}
-
-.items h1{
-    font-family: regular;
-    font-size: 20px;
-    margin-top: 0px;
-}
-
-.item-item{
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    margin-top: 5px;
-}
-
-.items .item-icon{
-    width: 30px;
-    padding-left: 20px;
-}
-
-.item-item h1{
-    font-family: regular;
-    font-size: 15px;
-}
-
-.item-2 .item-icon{
-    width: 29px;
-}
-
-.price-buy{
-    display: flex;
-    flex-direction: row;
-    padding: 20px;
-    gap: 65px;
-    align-items: center;
-}
-
-.price-buy .buy-now{
-    margin-top: 5px;
-    background-color: #01775f;
-    padding-left: 10px;
-    padding-right: 10px;
-    padding-top: 5px;
-    padding-bottom: 5px;
-    border-radius: 15px;
-    text-align: center;
-    color: white;
-    font-family: med-button;
-    box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px;
-    letter-spacing: 0.1em;
-    transition: 0.5s;
+    .container{
+        width: 90%;
+        transition: 500ms;
+    }
 }
