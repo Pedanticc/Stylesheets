@@ -3,6 +3,8 @@
     font-family: lobster-regular;
 }
 
+/* Global */
+
 *{
     padding: 0px;
     margin: 0px;
@@ -26,6 +28,8 @@ body{
     justify-content: center;
     height: 100vh;
 }
+
+/* Class-Based */
 
 .container{
     width: 1000px;
@@ -225,9 +229,11 @@ body{
     font-size: 1.0em;
     text-indent: 30px;
     transition: 0.1s;
-  }
+}
 
 
+/* Media-Queries */
+  
   @media screen and (max-width: 1020px) {
 
     .img-area{
