@@ -30,8 +30,8 @@ body{
     border-radius: 5px;
     margin-top: 20px;
     background-color: white;
-    height: fit-content;
     transition: 500ms;
+    height: max-content;
 }
 
 
@@ -57,8 +57,6 @@ body{
 .first-section .pic-area{
     border-radius: 15px;
     width: 400px;
-    min-width: 400px;
-    max-height: 400px;
     box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
 }
 
@@ -192,6 +190,10 @@ body{
 
 @media screen and (max-width: 1300px) {
 
+    .container{
+        height: fit-content;
+    }
+
     .first-section{
         flex-direction: column-reverse;
         justify-content: center;
@@ -200,17 +202,21 @@ body{
     }
 
     .first-section .pic-area{
-        justify-self: right;
-        align-self: flex-end;
-        transition: 200ms;
-    }
-    .first-section .paragraph{
         justify-self: center;
-        align-self: flex-start;
-        margin-top: 0px;
-        width: 80%;
+        align-self: center;
         transition: 200ms;
-    
+        width: 500px;
+        height: 500px;
+    }
+
+    .first-section .paragraph{
+        align-self: center;
+        display: flex;
+        text-align: center;
+        flex-direction: column;
+        padding: 0px;
+        margin: 0px;
+        width: fit-content;
     }
 
     .first-section .buy{
@@ -218,32 +224,68 @@ body{
         align-self: center;
     }
 
+    .box{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .box p{
+        text-align: center;
+    }
+
+    .icons{
+        padding: 0px;
+        margin-bottom: 10px;
+    }
+
     .second-section .boxes{
         flex-direction: column;
     }
+
+    .second-section .header{
+        text-align: center;
+        margin-bottom: 50px;
+        margin-top: -10px;
+    }
+
+    .third-section .container{
+        flex-direction: column;
+        height: max-content;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .third-section .pic{
+        margin-top: 30px;
+        width: 300px;
+        height: auto;
+        align-self: center;
+    }
+
 }
 
 @media screen and (max-width: 1280px) {
 
     .first-section .paragraph{
-        margin-left: 50px;
         transition: 200ms;
     }
 
     .first-section .pic-area{
-        margin-right: 50px;
         transition: 400ms;
     }
-}
 
+}
 
 @media screen and (max-width: 820px) {
 
     .first-section .pic-area{
-        margin-right: 0px;
         transition: 0ms;
         align-self: center;
-        width: auto;
+        max-width: 100%;
+        height: auto;
+        max-height: 500px;
     }
     
     .first-section .paragraph{
@@ -255,6 +297,8 @@ body{
         margin: 0px;
         width: fit-content;
     }
+
+
 }
 
 @media screen and (max-width: 799px) {
@@ -262,5 +306,14 @@ body{
     .container{
         width: 90%;
         transition: 500ms;
+    }
+
+    .second-section .header{
+        font-size: 13px;
+        transition: 500ms;
+    }
+
+    .third-section h1{
+        font-size: 20px;
     }
 }
